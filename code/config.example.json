@@ -1,0 +1,8 @@
+{
+  "llm": {"provider": "mock"},
+  "ocr": false,
+  "render_formats": [],
+  "max_attachment_bytes": 25000000,
+  "max_pdf_pages": 30,
+  "supplier_aliases": {}
+}

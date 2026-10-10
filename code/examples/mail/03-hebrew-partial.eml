@@ -1,0 +1,19 @@
+From: billing@example.invalid
+To: demo@example.invalid
+Date: Thu, 01 Oct 2026 10:00:00 +0000
+Message-ID: <03-hebrew-partial@example.invalid>
+Subject: SYNTHETIC TEST ONLY / =?utf-8?b?15PXldeS157XlCDXkdec15HXkw==?=
+MIME-Version: 1.0
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+ספק: ספק דוגמה בע״מ
+מספר חשבונית: DEMO-200
+תאריך: 01/10/2026
+מטבע: ILS
+סה״כ: 120.00
+סכום ששולם: 40.00
+יתרה לתשלום: 80.00
+סטטוס: שולם חלקית
+סוג: חשבונית
+Payment Evidence: סטטוס: שולם חלקית

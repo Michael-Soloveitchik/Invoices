@@ -1,0 +1,23 @@
+name: Offline synthetic tests
+on: [push, pull_request]
+permissions:
+  contents: read
+defaults:
+  run:
+    working-directory: code
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ['3.11', '3.12', '3.13']
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - run: sudo apt-get update && sudo apt-get install -y fonts-dejavu-core libpango-1.0-0
+      - run: python -m pip install -e ".[render,auth]"
+      - run: python -m unittest discover -s tests -v
+      - run: python -m compileall -q invoices_scrapper tests
+      - run: python -m invoices_scrapper --source eml --output /tmp/invoice-ci-demo

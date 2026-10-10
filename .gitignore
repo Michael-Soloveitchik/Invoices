@@ -1,0 +1,30 @@
+.env
+.env.*
+!.env.example
+private-output/
+private-input/
+*.sqlite3
+*.sqlite3-*
+*.eml
+!examples/mail/*.eml
+__pycache__/
+*.py[cod]
+.venv/
+*.egg-info/
+build/
+dist/
+credentials*.json
+token*.json
+
+# Never publish generated invoices or reports, even if this code is run at repo root.
+Invoices/
+reports/
+[12][0-9][0-9][0-9]/
+unknown/
+
+# No OAuth secrets anywhere, including nested credential folders.
+**/credentials/**
+!**/credentials/README.md
+!**/credentials/.gitkeep
+**/client_secret*.json
+**/token*.json

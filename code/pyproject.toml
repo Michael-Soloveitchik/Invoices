@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "invoices-scrapper"
+version = "0.1.0"
+description = "Read-only, audit-first email receipt and expense extraction"
+requires-python = ">=3.11"
+dependencies = ["Pillow>=10"]
+
+[project.optional-dependencies]
+auth = ["google-auth-oauthlib>=1.2,<2", "google-auth[requests]>=2.38,<3"]
+render = ["Pillow>=10", "reportlab>=4", "weasyprint>=70,<71", "PyMuPDF>=1.26,<2"]
+
+[project.scripts]
+invoices-scrapper = "invoices_scrapper.cli:main"
+
+[tool.setuptools.package-data]
+invoices_scrapper = ["prompts/*.txt"]

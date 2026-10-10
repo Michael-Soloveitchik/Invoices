@@ -1,0 +1,24 @@
+From: billing@example.invalid
+To: demo@example.invalid
+Date: Thu, 01 Oct 2026 10:00:00 +0000
+Message-ID: <05-linked-only@example.invalid>
+Subject: SYNTHETIC TEST ONLY / =?utf-8?b?15PXldeS157XlCDXkdec15HXkw==?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="===============6270673842072805704=="
+
+--===============6270673842072805704==
+Content-Type: text/plain; charset="utf-8"
+Content-Transfer-Encoding: 7bit
+
+Your document is available through a download link.
+
+--===============6270673842072805704==
+Content-Type: text/html; charset="utf-8"
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+
+<p>Your document is available through a download link.</p><a href=3D"https://=
+example.invalid/receipt">Download</a>
+
+--===============6270673842072805704==--
